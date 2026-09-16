@@ -5,7 +5,7 @@ import whatsappIcon from "@assets/logo_1769417985585.png";
 import linkedinIcon from "@assets/linkedin_1769417993177.png";
 import instagramIcon from "@assets/instagram_1769417996612.png";
 import xIcon from "@assets/twitter_1780755534520.png";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, BookOpen } from "lucide-react";
 import { useState } from "react";
 
 export function Footer() {
@@ -28,11 +28,12 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { icon: facebookIcon, alt: "Facebook", href: "https://www.facebook.com/profile.php?id=61590056023375" },
-    { icon: whatsappIcon, alt: "WhatsApp", href: "#" },
-    { icon: linkedinIcon, alt: "LinkedIn", href: "#" },
-    { icon: instagramIcon, alt: "Instagram", href: "https://www.instagram.com/_vip_networks/" },
-    { icon: xIcon, alt: "X", href: "https://x.com/_VIP_NETWORKS" },
+    { icon: facebookIcon, alt: "Facebook", href: "https://www.facebook.com/profile.php?id=61590056023375", image: true },
+    { icon: whatsappIcon, alt: "WhatsApp", href: "https://wa.me/919326144739", image: true },
+    { icon: linkedinIcon, alt: "LinkedIn", href: "https://www.linkedin.com/in/vip-networks-07928a411/", image: true },
+    { icon: instagramIcon, alt: "Instagram", href: "https://www.instagram.com/_vip_networks/", image: true },
+    { icon: xIcon, alt: "X", href: "https://x.com/_VIP_NETWORKS", image: true },
+    { icon: BookOpen, alt: "Catalogue", href: "https://catalogue.vipnetworks.in/", image: false },
   ];
 
   return (
@@ -54,14 +55,20 @@ export function Footer() {
               Leading provider of comprehensive IT infrastructure, security systems, and networking solutions for modern enterprises.
             </p>
             <div className="flex flex-wrap gap-3">
-              {socialLinks.map(({ icon, alt, href }, i) => (
+                {socialLinks.map(({ icon, alt, href, image }, i) => (
                 <a 
                   key={i} 
                   href={href} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center transition-all hover:scale-110 shadow-lg shadow-black/20"
                   data-testid={`link-social-${alt.toLowerCase()}`}
                 >
-                  <img src={icon} alt={alt} className="w-full h-full object-cover" />
+                    {image ? (
+                      <img src={icon as string} alt={alt} className="w-full h-full object-cover" />
+                    ) : (
+                      <BookOpen className="w-5 h-5 text-white" aria-label={alt} />
+                    )}
                 </a>
               ))}
             </div>

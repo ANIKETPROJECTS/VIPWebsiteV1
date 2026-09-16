@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { api, type ContactMessageInput } from "@shared/routes";
 import { useSubmitContact } from "@/hooks/use-contact";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, Loader2, Instagram, Facebook, Linkedin, Twitter, MessageSquare } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Loader2, Instagram, Facebook, Linkedin, Twitter, MessageSquare, BookOpen } from "lucide-react";
 import { z } from "zod";
 import worldMapVideo from "@assets/Untitled_design_1769405654510.mp4";
 import radarGif from "@assets/CCTV_Camera_1768636156008.gif";
@@ -44,11 +44,12 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook", color: "hover:text-[#1877F2]" },
-    { icon: Twitter, href: "#", label: "Twitter", color: "hover:text-[#1DA1F2]" },
-    { icon: Instagram, href: "#", label: "Instagram", color: "hover:text-[#E4405F]" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-[#0A66C2]" },
-    { icon: MessageSquare, href: "#", label: "WhatsApp", color: "hover:text-[#25D366]" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61590056023375", label: "Facebook", color: "hover:text-[#1877F2]" },
+    { icon: Twitter, href: "https://x.com/_VIP_NETWORKS", label: "X", color: "hover:text-[#1DA1F2]" },
+    { icon: Instagram, href: "https://www.instagram.com/_vip_networks/", label: "Instagram", color: "hover:text-[#E4405F]" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/vip-networks-07928a411/", label: "LinkedIn", color: "hover:text-[#0A66C2]" },
+    { icon: MessageSquare, href: "https://wa.me/919326144739", label: "WhatsApp", color: "hover:text-[#25D366]" },
+    { icon: BookOpen, href: "https://catalogue.vipnetworks.in/", label: "Catalogue", color: "hover:text-[#3b82f6]" },
   ];
 
   const servicesList = [
@@ -162,6 +163,8 @@ export default function Contact() {
                   <a 
                     key={i} 
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 transition-all hover:scale-110 hover:border-[#3b82f6]/30 ${social.color}`}
                     aria-label={social.label}
                   >
