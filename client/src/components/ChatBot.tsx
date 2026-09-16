@@ -29,7 +29,7 @@ export function ChatBot() {
 
     // Simple knowledge base logic
     setTimeout(() => {
-      let botResponse = "I'm sorry, I don't have specific information on that. Would you like to speak with our sales team? You can reach us at +91 9326144739 or vip.itinfra@gmail.com.";
+      let botResponse = "I'm sorry, I don't have specific information on that. Would you like to speak with our sales team? You can reach us at +91 9326144739 or vipul@vipnetworks.in.";
       
       const query = userMessage.toLowerCase();
       
@@ -60,7 +60,7 @@ export function ChatBot() {
         if (foundService) {
           botResponse = `${foundService.title}: ${foundService.description}\n\nKey features include:\n${foundService.features.slice(0, 3).map(f => `• ${f}`).join("\n")}`;
         } else if (query.includes("contact") || query.includes("reach") || query.includes("phone") || query.includes("email")) {
-          botResponse = "You can contact VIP Networks at:\nPhone: +91 9326144739\nEmail: vip.itinfra@gmail.com\nLocation: Jogeshwari East, Mumbai.";
+          botResponse = "You can contact VIP Networks at:\nPhone: +91 9326144739\nEmail: vipul@vipnetworks.in\nLocation: Jogeshwari East, Mumbai.";
         }
       }
 

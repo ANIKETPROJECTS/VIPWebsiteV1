@@ -146,8 +146,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg md:text-xl text-white mb-1 md:mb-2 uppercase tracking-wide">Email</h4>
-                    <a href="mailto:vip.itinfra@gmail.com" className="text-white/60 text-sm md:text-lg hover:text-[#3b82f6] transition-colors block">
-                      vip.itinfra@gmail.com
+                    <a href="mailto:vipul@vipnetworks.in" className="text-white/60 text-sm md:text-lg hover:text-[#3b82f6] transition-colors block">
+                      vipul@vipnetworks.in
                     </a>
                   </div>
                 </div>
