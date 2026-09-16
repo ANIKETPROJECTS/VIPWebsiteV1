@@ -4,7 +4,6 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useState, useEffect, useCallback } from "react";
-import { CustomCursor } from "@/components/CustomCursor";
 import { ChatBot } from "@/components/ChatBot";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { InternalLoadingScreen } from "@/components/InternalLoadingScreen";
@@ -109,7 +108,6 @@ function App() {
         <LoadingScreen />
         {!isLoading && (
           <div className="relative flex h-screen w-full overflow-y-auto overflow-x-hidden">
-            <CustomCursor />
             <ChatBot />
             <ScrollToTopButton />
             <Toaster />
