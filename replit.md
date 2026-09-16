@@ -77,3 +77,9 @@ shared/           # Shared types and contracts
 
 ### Required Environment Variables
 - `DATABASE_URL`: PostgreSQL connection string
+
+## Running on Replit
+
+- Run the `Start application` workflow, which executes `npm run dev`.
+- The Express server binds to `0.0.0.0:5000` and serves both the API and Vite frontend.
+- The contact form requires the project PostgreSQL database and the schema applied with `npm run db:push`.
