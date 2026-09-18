@@ -3,6 +3,9 @@ import App from "./App";
 import "./index.css";
 import { Component, ReactNode } from "react";
 
+// Keep the browser tab concise while the initial HTML title remains optimized for search crawlers.
+document.title = "VIP Networks";
+
 class GoogleTranslateErrorBoundary extends Component<
   { children: ReactNode },
   { hasError: boolean; errorCount: number }
